@@ -58,11 +58,6 @@ Expected Output: 52
 
 Describe: companyCheck(text);
 
-Test: "It checks if this CC was issued by accredited company. American Express cards always begin with the numbers 34 or 37. 
-Code: companyCheck(text);
-textArray: "3402080860435620"
-Expected Output: Amex
-
 Test: "It checks if this CC was issued by accredited company. Visa cards begin with the number 4. 
 Code: companyCheck(text);
 textArray: "4102080860435620"
@@ -77,6 +72,11 @@ Test: "It checks if this CC was issued by accredited company. Discover cards beg
 Code: companyCheck(text);
 textArray: "6102080860435620"
 Expected Output: Discover
+
+Test: "It checks if this CC was issued by accredited company. American Express cards always begin with the numbers 34 or 37. 
+Code: companyCheck(text);
+textArray: "3402080860435620"
+Expected Output: Amex
 
 ```
 

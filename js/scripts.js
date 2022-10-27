@@ -1,7 +1,25 @@
 // Business Logic
 
 function companyCheck(text) {
+  text.trim()
 
+  let accCompany = "";
+  if (text.charAt(0) === "4") {
+    accCompany = "Visa";
+    console.log(accCompany);
+  } else if (text.charAt(0) === "5") {
+    accCompany = "MC";
+    console.log(accCompany);
+  } else if (text.charAt(0) === "6") {
+    accCompany = "Discover";
+    console.log(accCompany);
+  } else if ((text.charAt(0) === "3") && (text.charAt(1) === "4") || ((text.charAt(0) === "3") && (text.charAt(1) === "7"))) {
+    accCompany = "Amex";
+  } else {
+    accCompany = "a Non-accredited Company";
+    console.log(accCompany);
+  }
+  return accCompany;
 }
 
 
@@ -43,6 +61,7 @@ window.addEventListener("load", function() {
     let div = document.querySelector("div");
     let textArray = convertToArrayAndNumbers(text);
     let results = addArrayElements(textArray);
+    let accCompanyOutput = companyCheck(text);
 
     let resultMessage = results;
     if (parseInt(results.toString().charAt(1)) === 0) {
@@ -52,5 +71,6 @@ window.addEventListener("load", function() {
     };
 
     div.append(resultMessage);
+    div.append("This credit card number is from " + accCompanyOutput)
   });
 });
