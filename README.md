@@ -27,61 +27,59 @@ This program uses Luhn's Algorithm to check the digits of a number in order to v
 ## Tests
 
 ```
-Describe: convertToArrayAndNumbers();
+Describe: convertToArrayAndNumbers()
 
 Test: "It coverts string to Array"
-Code: convertToArray("CATS CATERED THE EVENT");
-text: "0998445533334452"
+Code: 
+const text: "0998445533334452";
+convertToArray(text);
 Expected Output: ["0","9","9","8","4", etc]
 
 Test: "It coverts elements in array into numbers from strings"
-Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
-textArray: ["0","9","9","8","4", etc]
+Code: convertToArrayAndCheck("0998445533334452");
 Expected Output: [0,9,9,8,4, etc]
 
 Test: "It multiplies every other element in the array by 2"
-Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
-textArray: [0,9,9,8,4, etc]
+Code: convertToArrayAndCheck("0998445533334452");
 Expected Output: [0,18,9,16,4, etc]
 
 Test: "It adds the two digits of element where they were multiplied by two and it is now two digits"
-Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
-textArray: [0,18,9,16,4, etc]
+Code: convertToArrayAndCheck("0998445533334452");
 Expected Output: [0,9,9,7,4, etc]
 
-Describe: addArrayElements(textArray);
+Describe: addArrayElements();
 
 Test: "It adds all of the values of textArray together for a total"
-Code: validCheck(textArray);
-textArray: [4, 2, 0, 4, 0, 7, 0, 7, 8, 0, 4, 6, 5, 3, 2, 0]
+Code: addArrayElements(textArray);
+let textArray: [4, 2, 0, 4, 0, 7, 0, 7, 8, 0, 4, 6, 5, 3, 2, 0]
 Expected Output: 52
 
-Describe: companyCheck(text);
+Describe: companyCheck();
 
 Test: "It checks if this CC was issued by accredited company. Visa cards begin with the number 4. 
 Code: companyCheck(text);
-textArray: "4102080860435620"
-Expected Output: Visa
+const text: "4102080860435620"
+Expected Output: "Visa"
 
 Test: "It checks if this CC was issued by accredited company. MC cards begin with the number 5. 
 Code: companyCheck(text);
-textArray: "5102080860435620"
-Expected Output: MC
+const text: "5102080860435620"
+Expected Output: "MC"
 
 Test: "It checks if this CC was issued by accredited company. Discover cards begin with the number 6. 
 Code: companyCheck(text);
-textArray: "6102080860435620"
-Expected Output: Discover
+const text: "6102080860435620"
+Expected Output: "Discover"
 
 Test: "It checks if this CC was issued by accredited company. American Express cards always begin with the numbers 34 or 37. 
 Code: companyCheck(text);
-textArray: "3402080860435620"
-Expected Output: Amex
+const text: "3402080860435620"
+Expected Output: "Amex"
 
 Test: "It checks if the length of elments for the CC number is valid length as part of beginning number check" 
 Code: companyCheck(text);
-textArray: "3402080860435620"
-Expected Output: 16
+const text: "3402080860435620"
+Expected Output: "a Non-accredited Company"
 
 ```
 
