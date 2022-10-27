@@ -78,6 +78,11 @@ Code: companyCheck(text);
 textArray: "3402080860435620"
 Expected Output: Amex
 
+Test: "It checks if the length of elments for the CC number is valid length as part of beginning number check" 
+Code: companyCheck(text);
+textArray: "3402080860435620"
+Expected Output: 16
+
 ```
 
 ## Known Bugs

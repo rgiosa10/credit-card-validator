@@ -1,19 +1,21 @@
 // Business Logic
 
+
+
 function companyCheck(text) {
   cleanString = text.trim()
 
   let accCompany = "";
-  if (cleanString.charAt(0) === "4") {
+  if ((cleanString.charAt(0) === "4") && (cleanString.length === 16)) {
     accCompany = "Visa";
     console.log(accCompany);
-  } else if (cleanString.charAt(0) === "5") {
+  } else if ((cleanString.charAt(0) === "5") && (cleanString.length === 16)) {
     accCompany = "MC";
     console.log(accCompany);
-  } else if (cleanString.charAt(0) === "6") {
+  } else if ((cleanString.charAt(0) === "6") && (cleanString.length === 16)) {
     accCompany = "Discover";
     console.log(accCompany);
-  } else if ((cleanString.charAt(0) === "3") && (cleanString.charAt(1) === "4") || ((cleanString.charAt(0) === "3") && (cleanString.charAt(1) === "7"))) {
+  } else if (((cleanString.charAt(0) === "3") && (cleanString.charAt(1) === "4") && (cleanString.length === 15)) || ((cleanString.charAt(0) === "3") && (cleanString.charAt(1) === "7") && (cleanString.length === 15))) {
     accCompany = "Amex";
   } else {
     accCompany = "a Non-accredited Company";
@@ -64,12 +66,12 @@ window.addEventListener("load", function() {
     let accCompanyOutput = companyCheck(text);
 
     let resultMessage = results;
-    if (parseInt(results.toString().charAt(1)) === 0) {
+    if ((parseInt(results.toString().charAt(1)) === 0) || (accCompanyOutput === "a Non-accredited Company")) {
       resultMessage = "This card number is NOT valid.";
     } else {
       resultMessage = "This card number is valid.";
     };
-
+    
     div.append(resultMessage);
     div.append(" This credit card number is from " + accCompanyOutput)
   });
