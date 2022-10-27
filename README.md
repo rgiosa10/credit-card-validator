@@ -40,10 +40,15 @@ Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
 textArray: ["0","9","9","8","4", etc]
 Expected Output: [0,9,9,8,4, etc]
 
-Test: "It multiplies each element in the array by 2"
+Test: "It multiplies every other element in the array by 2"
 Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
 textArray: [0,9,9,8,4, etc]
-Expected Output: [0,18,18,16,8, etc]
+Expected Output: [0,18,9,16,4, etc]
+
+Test: "It adds the two digits of element where they were multiplied by two and it is now two digits"
+Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
+textArray: [0,18,9,16,4, etc]
+Expected Output: [0,9,9,7,4, etc]
 
 ```
 
