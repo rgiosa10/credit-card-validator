@@ -35,10 +35,10 @@ Code: convertToArray("CATS CATERED THE EVENT");
 text: "0998445533334452"
 Expected Output: ["0","9","9","8","4", etc]
 
-Test: "It coverts number into an array"
+Test: "It coverts elements in array into numbers from strings"
 Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
-text: "CATS CATERED THE EVENT"
-Expected Output: False (for element "CAT")
+textArray: ["0","9","9","8","4", etc]
+Expected Output: [0,9,9,8,4, etc]
 
 ```
 
