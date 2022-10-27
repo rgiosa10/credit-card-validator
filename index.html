@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="js/scripts.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +10,30 @@
   <title>Credit Card Validator</title>
 </head>
 <body>
-  <h1>Credit Card Validator</h1>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Credit Card Validator</h1>
+      <p class="lead">Go ahead and use the tool below to see if the credit card number is valid:</span></p>
+    </div>
+  </div>
 
-  <form id="text-input">
-    <label for="text-input"></label>
-    <input type="text" name="text-input1" id="text-input1">
-    <button type="submit">Submit</button>
-  </form><br>
+  <div class="container">
+    <p class="lead">Credit Card Number (please no letters or characters):</p>
+    <form id="text-input">
+      <label for="text-input"></label>
+      <input type="text" name="text-input1" id="text-input1">
+      <button class="btn btn-primary btn-lg" id="form-submit-button" type="submit">Submit</button>
+    </form><br>
 
-  <div id="results"></div>
+    <button id="reset-btn" type="button" class="hidden">Click to re-enter info</button>
+    <div id="result" class="hidden">
+      <div id="results" class="jumbotron jumbotron-fluid">
+        <h2 id="resultText" class="display-4">Placeholder: Results text will show up here</h2>
+
+      </div>
+    </div>
+
+  </div>
   
 </body>
 </html>

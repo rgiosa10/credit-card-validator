@@ -1,7 +1,5 @@
 // Business Logic
 
-
-
 function companyCheck(text) {
   cleanString = text.trim()
 
@@ -53,14 +51,27 @@ function addArrayElements(textArray) {
 
 // UI Logic
 
+function reset() {
+  // Unhide form submit button
+  document.getElementById("form-submit-button").setAttribute("class", "btn btn-primary btn-lg");
+  // Hide the results section and reset button
+  document.getElementById("result").setAttribute("class", "hidden");
+  document.getElementById("reset-btn").setAttribute("class", "hidden");
+
+  // Reset form inputs to default values
+  document.getElementById("text-input1").value = null;
+}
+
 window.addEventListener("load", function() {
   let form = document.querySelector("form");
+  let resetBtn = document.getElementById("reset-btn");
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     const text = document.getElementById("text-input1").value;
-    let div = document.querySelector("div");
+    let div = document.getElementById("results");
+    let h2 = document.getElementById("resultText");
     let textArray = convertToArrayAndNumbers(text);
     let results = addArrayElements(textArray);
     let accCompanyOutput = companyCheck(text);
@@ -72,7 +83,18 @@ window.addEventListener("load", function() {
       resultMessage = "This card number is valid.";
     };
     
-    div.append(resultMessage);
-    div.append(" This credit card number is from " + accCompanyOutput)
+    h2.innerText = resultMessage + " This credit card number is from " + accCompanyOutput
+
+    // Unhide results
+    document.getElementById("result").setAttribute("class", "bottom");
+
+    // Hide the form submit button
+    document.getElementById("form-submit-button").setAttribute("class", "hidden");
+
+
+    // Unhide the reset button
+    document.getElementById("reset-btn").setAttribute("class","btn btn-outline-warning");
+    // Event Listener for clicking the reset button
+    resetBtn.addEventListener("click", reset);
   });
 });
