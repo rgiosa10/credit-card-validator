@@ -3,6 +3,9 @@ function convertToArrayAndNumbers(text) {
   for (let i = 0; i < textArray.length; i += 1) {
     textArray[i] = parseInt(textArray[i]);
   }
+  for (let i = 0; i < textArray.length; i += 1){
+    
+  }
   return textArray;
 }
 

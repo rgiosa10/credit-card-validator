@@ -40,6 +40,11 @@ Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
 textArray: ["0","9","9","8","4", etc]
 Expected Output: [0,9,9,8,4, etc]
 
+Test: "It multiplies each element in the array by 2"
+Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
+textArray: [0,9,9,8,4, etc]
+Expected Output: [0,18,18,16,8, etc]
+
 ```
 
 ## Known Bugs
