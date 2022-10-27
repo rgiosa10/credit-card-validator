@@ -1,29 +1,29 @@
-# _{Application Name}_
+# Credit Card Validator
 
-#### By _**{List of contributors}**_
+#### By Ruben Giosa
 
-#### _{Brief description of application}_
+#### It is a program that checks if a credit card number is valid. 
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* JavaScript
+* HTML
+* CSS
+* Markdown
+* TDD
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+This program uses Luhn's Algorithm to check the digits of a number in order to validate it. It is widely used today in creating and validating credit card, account, and ID numbers.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* Go to https://github.com/rgiosa10/credit-card-validator.git to find the specific repository for this website.
+* Then open your terminal. I recommend going to your Desktop directory (command: $ cd Desktop).
+* Then clone the project by inputting: $ git clone https://github.com/rgiosa10/credit-card-validator.git
+* Go to the new directory (command: $ cd credit-card-validator) or open the directory folder on your desktop.
+* Finally, locate the index.html file and double-click to open. That will open the app on your web browser.
+* Here is a link to the site on Git Hub Pages: https://rgiosa10.github.io/credit-card-validator
 
 ## Tests
 
@@ -61,11 +61,16 @@ Expected Output: 52
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No known bugs at this time
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+MIT License
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) 2022 Ruben Giosa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
