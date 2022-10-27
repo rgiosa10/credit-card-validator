@@ -50,6 +50,13 @@ Code: convertToArrayAndCheck("CATS CATERED THE EVENT");
 textArray: [0,18,9,16,4, etc]
 Expected Output: [0,9,9,7,4, etc]
 
+Describe: addArrayElements(textArray);
+
+Test: "It adds all of the values of textArray together for a total"
+Code: validCheck(textArray);
+textArray: [4, 2, 0, 4, 0, 7, 0, 7, 8, 0, 4, 6, 5, 3, 2, 0]
+Expected Output: 52
+
 ```
 
 ## Known Bugs

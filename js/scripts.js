@@ -1,5 +1,7 @@
+// Business Logic
+
 function convertToArrayAndNumbers(text) {
-  textArray = text.split("");
+  let textArray = text.split("");
   for (let i = 0; i < textArray.length; i += 1) {
     textArray[i] = parseInt(textArray[i]);
   }
@@ -8,12 +10,25 @@ function convertToArrayAndNumbers(text) {
   }
   for (let i = 0; i < textArray.length; i += 1) {
     if (textArray[i] > 9) {
-      numberToString = textArray[i].toString();
+      let numberToString = textArray[i].toString();
       textArray[i] = parseInt(numberToString.charAt(0)) + parseInt(numberToString.charAt(1));
     } 
   }
+  console.log(textArray)
   return textArray;
 }
+
+function addArrayElements(textArray) {
+  let sumOfArray = 0;
+  textArray.forEach(function(element) {
+    sumOfArray += element;
+  });
+  return sumOfArray;
+}
+
+// UI Logic
+
+
 
 window.addEventListener("load", function() {
   let form = document.querySelector("form");
@@ -22,7 +37,17 @@ window.addEventListener("load", function() {
     event.preventDefault();
 
     const text = document.getElementById("text-input1").value;
+    let div = document.querySelector("div");
+    let textArray = convertToArrayAndNumbers(text);
+    let results = addArrayElements(textArray);
 
-    console.log(convertToArrayAndNumbers(text))
+    let resultMessage = results;
+    if (parseInt(results.toString().charAt(1)) === 0) {
+      resultMessage = "This card number is NOT valid.";
+    } else {
+      resultMessage = "This card number is valid.";
+    }
+
+    div.append(resultMessage);
   });
 });
