@@ -1,7 +1,12 @@
 // Business Logic
 
+function companyCheck(text) {
+
+}
+
+
 function convertToArrayAndNumbers(text) {
-  let textArray = text.split("");
+  let textArray = text.trim().split("");
   for (let i = 0; i < textArray.length; i += 1) {
     textArray[i] = parseInt(textArray[i]);
   };
