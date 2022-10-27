@@ -1,19 +1,19 @@
 // Business Logic
 
 function companyCheck(text) {
-  text.trim()
+  cleanString = text.trim()
 
   let accCompany = "";
-  if (text.charAt(0) === "4") {
+  if (cleanString.charAt(0) === "4") {
     accCompany = "Visa";
     console.log(accCompany);
-  } else if (text.charAt(0) === "5") {
+  } else if (cleanString.charAt(0) === "5") {
     accCompany = "MC";
     console.log(accCompany);
-  } else if (text.charAt(0) === "6") {
+  } else if (cleanString.charAt(0) === "6") {
     accCompany = "Discover";
     console.log(accCompany);
-  } else if ((text.charAt(0) === "3") && (text.charAt(1) === "4") || ((text.charAt(0) === "3") && (text.charAt(1) === "7"))) {
+  } else if ((cleanString.charAt(0) === "3") && (cleanString.charAt(1) === "4") || ((cleanString.charAt(0) === "3") && (cleanString.charAt(1) === "7"))) {
     accCompany = "Amex";
   } else {
     accCompany = "a Non-accredited Company";
@@ -71,6 +71,6 @@ window.addEventListener("load", function() {
     };
 
     div.append(resultMessage);
-    div.append("This credit card number is from " + accCompanyOutput)
+    div.append(" This credit card number is from " + accCompanyOutput)
   });
 });
