@@ -8,7 +8,6 @@
 
 * JavaScript
 * HTML
-* CSS
 * Markdown
 * TDD
 
