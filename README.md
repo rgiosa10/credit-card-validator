@@ -8,12 +8,14 @@
 
 * JavaScript
 * HTML
+* CSS
+* Bootstrap
 * Markdown
 * TDD
 
 ## Description
 
-This program uses Luhn's Algorithm to check the digits of a number in order to validate it. It is widely used today in creating and validating credit card, account, and ID numbers.
+This program uses three steps to check the digits of a number in order to validate it. The three steps are: 1) using Luhn's Algorithm, which is widely used today in creating and validating credit card, account, and ID numbers 2) Validate the First Digits of the Credit Card Number (e.g. Amex cards always begin with the numbers 34 or 37.) and 3) Validate the Length of the Credit Card Number (e.g. Amex 15 digits vs Visa/MC/Discovery 16 digits).
 
 ## Setup/Installation Requirements
 
@@ -85,7 +87,7 @@ Expected Output: "a Non-accredited Company"
 
 ## Known Bugs
 
-* No known bugs at this time
+* Need to integrate incorrect input catcher to prevent issues with letters and characters being inputted. 
 
 ## License
 

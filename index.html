@@ -18,21 +18,21 @@
   </div>
 
   <div class="container">
-    <p class="lead">Credit Card Number (please no letters or characters):</p>
+    <p class="lead">Please input your credit card number (No letters or $&@!*%):</p>
     <form id="text-input">
       <label for="text-input"></label>
-      <input type="text" name="text-input1" id="text-input1">
-      <button class="btn btn-primary btn-lg" id="form-submit-button" type="submit">Submit</button>
-    </form><br>
+      <div class="input-group input-group-lg">
+        <input id="text-input1" name="text-input1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <button class="btn btn-primary btn-lg" id="form-submit-button" type="submit">Submit</button>
+      </div><br>
+    </form>
 
     <button id="reset-btn" type="button" class="hidden">Click to re-enter info</button>
     <div id="result" class="hidden">
       <div id="results" class="jumbotron jumbotron-fluid">
         <h2 id="resultText" class="display-4">Placeholder: Results text will show up here</h2>
-
       </div>
     </div>
-
   </div>
   
 </body>
