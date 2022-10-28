@@ -1,7 +1,7 @@
 // Business Logic
 
 function companyCheck(text) {
-  cleanString = text.trim()
+  cleanString = text.replaceAll(" ","");
 
   let accCompany = "";
   if ((cleanString.charAt(0) === "4") && (cleanString.length === 16)) {

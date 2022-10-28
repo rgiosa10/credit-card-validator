@@ -87,7 +87,7 @@ Expected Output: "a Non-accredited Company"
 
 ## Known Bugs
 
-* Need to integrate incorrect input catcher to prevent issues with letters and characters being inputted. 
+* Need to integrate exception input catcher to manage issues with letters and characters being inputted. Add functionality that asks user to re-enter information
 
 ## License
 
